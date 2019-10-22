@@ -2,7 +2,7 @@
 
 Play rock paper sciscors in python
 
-#Prerequisites: 
+# Prerequisites: 
 	All you need is Python 3,
 	Clone the project, navigate to the right directory and run game.py in a python terminal
 
