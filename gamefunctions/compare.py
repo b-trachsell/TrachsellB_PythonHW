@@ -1,15 +1,12 @@
 import time
 from random import randint
 
-def comparing ():
 
-	global player
-	global computer
-	global plives
-	global clives
+def comparing (player, computer):
 	global pwin
 	global cwin
-
+	global plives
+	global clives
 
 	if ( player == computer ):
 		print ("  You and the computer chose the same! \n")

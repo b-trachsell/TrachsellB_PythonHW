@@ -1,8 +1,6 @@
 from random import randint
 import time
-from gamefunctions import winlose
-from gamefunctions import compare
-
+from gamefunctions import winlose, compare
 #Choices is an array, an array is a container that can hold multiple values
 
 choices = ["rock", "paper", "scissors"]
@@ -13,6 +11,7 @@ plives = 5
 clives = 5
 player = False
 #State variables
+
 
 
 print ("\n\n\n\n\n\033[35m * * * * Welcome to Rock Paper Scissors in Python! * * * * \033[30;0;0m")
@@ -48,7 +47,7 @@ while player == False:
 	#proceeds to check who the winner is, and prints the result
 	
 
-	compare.comparing()
+	compare.comparing(player, computer)
 
 	# if ( player == computer ):
 	# 	print ("  You and the computer chose the same! \n")
