@@ -1,50 +1,57 @@
 import time
 from random import randint
+from gamefunctions import config
 
+#config.computer = config.nconfig.computer
+#config.pwin = config.nconfig.pwin
+#config.cwin = config.nconfig.cwin
+#config.plives = config.nconfig.plives
+#config.clives = config.nconfig.clives
+#config.player = config.nconfig.player
 
-def comparing (player, computer):
-	global pwin
-	global cwin
-	global plives
-	global clives
+print ("hello")
+print (config.player)
 
-	if ( player == computer ):
+def comparing ():
+        
+        
+	if ( config.player == config.computer ):
 		print ("  You and the computer chose the same! \n")
 		print ( "\033[35m            ** Tie! **\033[30;0;0m" )
 
-	elif ( player == "rock" ):
-		if (computer == "paper"):
+	elif ( config.player == "rock" ):
+		if (config.computer == "paper"):
 			print ("           Paper covers rock! \n")
-			print (cwin)
-			plives = plives - 1
+			print (config.cwin)
+			config.plives = config.plives - 1
 
-		elif (computer == "scissors"):
+		elif (config.computer == "scissors"):
 			print ("          Rock smashes scissors! \n")
-			print (pwin)
-			clives = clives - 1
+			print (config.pwin)
+			config.clives = config.clives - 1
 
-	elif ( player == "paper"):
-		if (computer == "rock"):
+	elif ( config.player == "paper"):
+		if (config.computer == "rock"):
 			print ("           Paper covers rock! \n")
-			print (pwin)
-			clives = clives - 1
+			print (config.pwin)
+			config.clives = config.clives - 1
 
-		elif (computer == "scissors"):
+		elif (config.computer == "scissors"):
 			print ("           Scissors cut paper! \n")
-			print (cwin)
-			plives = plives - 1
+			print (config.cwin)
+			config.plives = config.plives - 1
 
 
-	elif ( player == "scissors" ):
-		if ( computer == "paper"):
+	elif ( config.player == "scissors" ):
+		if ( config.computer == "paper"):
 			print ("           Scissors cut paper! \n")
-			print (pwin)
-			clives = clives - 1
+			print (config.pwin)
+			config.clives = config.clives - 1
 
-		elif (computer == "rock"):
+		elif (config.computer == "rock"):
 			print ("          Rock smashes scissors! \n")
-			print (cwin)
-			plives = plives - 1
+			print (config.cwin)
+			config.plives = config.plives - 1
 
 	else:
 		print ("     Sorry, that's not a valid answer! ")

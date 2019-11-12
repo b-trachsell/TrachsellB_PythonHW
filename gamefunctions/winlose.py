@@ -1,12 +1,8 @@
 from random import randint
+from gamefunctions import config
 
 #defining a variable
 def winolose(status):
-	global clives 
-	global plives 
-	global choices
-	global computer
-	global player 
 
 	print ("\n\n \033[34m ----------------------------------------------------\033[30;0;0m" )
 	print ("\n\n     You ", status )
@@ -18,9 +14,9 @@ def winolose(status):
 		exit ()
 
 	elif (choice == "Y" or choice == "y"):
-		print ("\n\n Preparing to start again... ")
-		plives = 5
-		clives = 5
-
+                print ("\n\n Preparing to start again... ")
+                config.plives = 5
+                config.clives = 5
+                
 	else:
 		print ("E")
