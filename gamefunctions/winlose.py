@@ -1,8 +1,10 @@
 from random import randint
 from gamefunctions import config
+import time
 
 #defining a variable
 def winolose(status):
+
 
 	print ("\n\n \033[34m ----------------------------------------------------\033[30;0;0m" )
 	print ("\n\n     You ", status )
@@ -19,4 +21,8 @@ def winolose(status):
                 config.clives = 5
                 
 	else:
-		print ("E")
+		#use recursion to call winolose until the right input :)
+		#Call the function within the function to make it do the thing again.
+		print ("\n       Sorry, that's not an option!")
+		time.sleep (0.8)
+		winolose(status)

@@ -1,16 +1,6 @@
 from random import randint
 import time
 from gamefunctions import winlose, compare, config
-#config.choices is an array, an array is a container that can hold multiple values
-
-#config.choices = config.nconfig.choices
-#config.computer = config.nconfig.computer
-#config.pwin = config.nconfig.pwin
-#config.cwin = config.nconfig.cwin
-#config.plives = config.nconfig.plives
-#config.clives = config.nconfig.clives
-#config.player = config.nconfig.player
-#State variables
 
 
 
@@ -26,9 +16,9 @@ while config.player == False:
 	time.sleep(1.5)
 	# Separates each round and delays the next round for easier reading of last rounds results
 	
-	print( "\n\n          player lives:", config.plives, "/5\n")
-	print( "          computer lives:", config.clives, "/5\n")
-	# Displays config.player and config.computer life totals
+	print( "\n\n          player lives:", config.plives, "/", config.tlives, "\n")
+	print( "          computer lives:", config.clives, "/", config.tlives, "\n")
+	# Displays player and computer life totals
 	
 	config.player = input ("\n\n    Choose rock, paper, or scissors\n\n                 ")
 	config.player = config.player.lower()
@@ -37,16 +27,14 @@ while config.player == False:
 	if ( config.player == "quit" ):
 		exit()
 		print ("\n\n\n")
-		#Checks if the config.player wants to quit before any game happens
+		#Checks if the player wants to quit before any game happens
 		#Prints a few lines for replay clarity
 
 	print( "\n \033[31m      computer chose:    ", config.computer)
 	print("\033[32m       player chose:      ", config.player,"\n \033[30;0;0m")
-	#displays what each config.player chose, if the config.player did not choose quit
+	#displays what each player chose, if the player did not choose quit
 	
 	#proceeds to check who the winner is, and prints the result
-	
-
 	compare.comparing()
 
 	# if ( config.player == config.computer ):

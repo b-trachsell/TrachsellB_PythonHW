@@ -2,15 +2,6 @@ import time
 from random import randint
 from gamefunctions import config
 
-#config.computer = config.nconfig.computer
-#config.pwin = config.nconfig.pwin
-#config.cwin = config.nconfig.cwin
-#config.plives = config.nconfig.plives
-#config.clives = config.nconfig.clives
-#config.player = config.nconfig.player
-
-print ("hello")
-print (config.player)
 
 def comparing ():
         
